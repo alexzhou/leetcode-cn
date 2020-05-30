@@ -18,7 +18,7 @@ class Solution {
     }
 
 
-
+    //尾插入 然后leetcode 的测试方法里面 并没有上面使用PHP的内置方法快
     function merge2(&$nums1, $m, $nums2, $n) {
         $p1 = $m - 1;
         $p2 = $n - 1;
