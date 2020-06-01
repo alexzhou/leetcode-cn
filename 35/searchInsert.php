@@ -44,10 +44,6 @@ class Solution {
 
 }
 
-/**
- * [1,3,5,6]
- * 2
- */
 $nums = [1,3,5,6];$target = 7;
 $obj = new Solution();
 echo $obj->searchInsert3($nums,$target).PHP_EOL;
