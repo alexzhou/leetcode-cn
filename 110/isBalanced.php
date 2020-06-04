@@ -38,4 +38,5 @@ class Solution {
         if ($node === null) return 0;
         return 1 + max($this->height($node->left), $this->height($node->right));
     }
+
 }
