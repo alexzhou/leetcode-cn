@@ -8,12 +8,11 @@ class Solution {
      * @return Integer
      */
     function pathSum($root, $sum) {
-        //TODO 未完成 不正确
         $result = [];
         $this->path($root,[],$result);
         $count = 0;
         foreach ($result as $items){
-            if( array_sum($items)==$sum)$count++;
+            //TODO 判断每个有序数组的子数组和
         }
         return $count;
     }
@@ -23,7 +22,6 @@ class Solution {
             return $path;
         }
         $path[] = $node->val;
-        $result[] = $path;
         if ($node->left){
             $this->path($node->left, $path, $result);
         }
@@ -31,7 +29,7 @@ class Solution {
             $this->path($node->right, $path, $result);
         }
         if ($node->left===null && $node->right===null){
-            return $path;
+            $result[] = $path;
         }
     }
 }
