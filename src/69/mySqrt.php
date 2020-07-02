@@ -4,6 +4,7 @@ class Solution {
     /**
      * @param Integer $x
      * @return Integer
+     * 牛顿迭代法
      */
     function mySqrt($x) {
         $g=$x;
@@ -16,4 +17,4 @@ class Solution {
 }
 $x = 8;
 $obj  = new Solution();
-echo $obj->mySqrt($x);
+echo $obj->mySqrt2($x);
