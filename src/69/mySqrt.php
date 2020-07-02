@@ -17,4 +17,4 @@ class Solution {
 }
 $x = 8;
 $obj  = new Solution();
-echo $obj->mySqrt2($x);
+echo $obj->mySqrt($x);
