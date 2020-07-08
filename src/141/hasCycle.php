@@ -1,5 +1,7 @@
 <?php
+
 use common\ListNode;
+
 /**
  * Definition for a singly-linked list.
  * class ListNode {
@@ -8,35 +10,44 @@ use common\ListNode;
  *     function __construct($val) { $this->val = $val; }
  * }
  */
-class Solution {
+class Solution
+{
     /**
      * @param ListNode $head
      * @return Boolean
      */
-    function hasCycle($head) {
+    function hasCycle($head)
+    {
         $slow = $head;
         $fast = $head;
-        while ($slow && $fast->next){
+        while ($slow && $fast->next) {
             $slow = $slow->next;
             $fast = $fast->next->next;
-            if (!$fast){ return false;}
-            if($slow == $fast){return true;}
+            if (!$fast) {
+                return false;
+            }
+            if ($slow == $fast) {
+                return true;
+            }
         }
         return false;
     }
+
     /**
      * @param ListNode $head
      * @return Boolean
      */
-    function hasCycle2($head) {
+    function hasCycle2($head)
+    {
         $set = [];
-        while ($head){
-           if(in_array($head,$set)){
-               return true;
-           }else{
-               $set[] = $head;
-           }
-           $head = $head->next;
+        while ($head) {
+            $id = spl_object_id($head);
+            if (in_array($id, $set)) {
+                return true;
+            } else {
+                $set[] = $id;
+            }
+            $head = $head->next;
         }
         return false;
     }
