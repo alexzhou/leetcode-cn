@@ -18,35 +18,31 @@ class Solution {
         //TODO not complete
         if($root===null)return [];
         $result = [];
-        $level = 0;
-        $left = 1;
-        $this->traverse($root,$result,$level,$left);
+        $level = 1;
+        $this->traverse($root,$result,$level);
         return array_values($result);
     }
     /**
+     * DFS 深度遍历的操作
      * @param TreeNode $node
      */
-    function traverse($node,&$result,$level,$left){
-        $result[$level][] = $node->val;
-        if($node->left || $node->right){
-            $level++;
+    function traverse($node,&$result,$level){
+        if(!isset($result[$level])){
+            $result[$level] = [];
+        }
+        if($level%2){
+            array_push($result[$level],$node->val);
         }else{
+            array_unshift($result[$level],$node->val);
+        }
+        if($node->left==null && $node->right==null){
             return ;
         }
-        if($left){
-            if($node->right){
-                $this->traverse($node->right,$result,$level,0);
-            }
-            if($node->left){
-                $this->traverse($node->left,$result,$level,0);
-            }
-        }else{
-            if($node->left){
-                $this->traverse($node->left,$result,$level,1);
-            }
-            if($node->right){
-                $this->traverse($node->right,$result,$level,1);
-            }
+        if($node->left){
+            $this->traverse($node->left,$result,$level+1);
+        }
+        if($node->right){
+            $this->traverse($node->right,$result,$level+1);
         }
 
     }
