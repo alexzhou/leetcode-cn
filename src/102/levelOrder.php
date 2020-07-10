@@ -21,7 +21,15 @@ class Solution {
         $this->traverse($root,$result,$level);
         return array_values($result);
     }
+
+    function levelOrder2($root) {
+        if($root===null)return [];
+        $result = [];
+        $this->traverse2($root,$result);
+        return array_values($result);
+    }
     /**
+     * DFS
      * @param TreeNode $node
      */
     function traverse($node,&$result,$level){
@@ -36,6 +44,26 @@ class Solution {
         }
         if($node->right){
             $this->traverse($node->right,$result,$level);
+        }
+    }
+
+    /**
+     * BFS
+     * @param TreeNode $node
+     * @param $result
+     */
+    function traverse2($node,&$result){
+        $queue = [];
+        array_push($queue,$node);
+        while (!empty($queue)){
+            $size = count($queue);
+            $result[] = [];
+            for($i=1;$i<=$size;$i++){
+                $item = array_shift($queue);
+                $result[count($result)-1][] = $item->val;
+                if($item->left)array_push($queue,$item->left);
+                if($item->right)array_push($queue,$item->right);
+            }
         }
     }
 }
