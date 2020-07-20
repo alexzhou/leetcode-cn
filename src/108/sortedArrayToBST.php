@@ -16,7 +16,7 @@ class Solution {
         $pos = count($nums)/2;
         $node = new TreeNode($nums[$pos]);
         $node->left = $this->sortedArrayToBST(array_slice($nums,0,$pos));
-        $node->left = $this->sortedArrayToBST(array_slice($nums,$pos+1));
+        $node->right = $this->sortedArrayToBST(array_slice($nums,$pos+1));
         return $node;
     }
 }
