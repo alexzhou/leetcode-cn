@@ -1,4 +1,5 @@
 <?php
+namespace common;
 class TreeNode{
     public $val = null;
     public $left = null;
