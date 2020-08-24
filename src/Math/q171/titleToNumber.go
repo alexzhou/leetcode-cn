@@ -13,7 +13,6 @@ func titleToNumber(s string) int {
 		result += float64(s[i-1]-'A'+1) * math.Pow(26, float64(len-i))
 	}
 	return int(result)
-
 }
 
 func main() {
