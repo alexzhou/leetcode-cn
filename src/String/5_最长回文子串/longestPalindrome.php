@@ -14,7 +14,7 @@ class Solution {
             $tempLonger = strlen($s1) >= strlen($s2)? $s1:$s2;
             $res = strlen($res) >= strlen($tempLonger)? $res:$tempLonger;
         }
-
+        return $res;
     }
 
     function palindrome(&$s,$l,$r){
@@ -27,6 +27,8 @@ class Solution {
     }
 
     /**
-     * 这个算法比较好理解 马拉车算法有点复杂 不方便记忆
+     * 这个中心扩展算法算法比较好理解
+     * 马拉车算法有点复杂 不方便记忆
+     * 动态规划算法空间复杂度有点高
      */
 }
