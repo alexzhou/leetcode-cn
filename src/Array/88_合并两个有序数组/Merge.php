@@ -9,17 +9,8 @@ class Solution {
      * @param Integer $n
      * @return NULL
      */
-    function merge(&$nums1, $m, $nums2, $n) {
-        $nums1 = array_slice($nums1,0,$m);
-       foreach ($nums2 as $v){
-           array_push($nums1,$v);
-       }
-       sort($nums1);
-    }
-
-
     //尾插入 然后leetcode 的测试方法里面 并没有上面使用PHP的内置方法快
-    function merge2(&$nums1, $m, $nums2, $n) {
+    function merge(&$nums1, $m, $nums2, $n) {
         $p1 = $m - 1;
         $p2 = $n - 1;
         $p = $m + $n - 1;
