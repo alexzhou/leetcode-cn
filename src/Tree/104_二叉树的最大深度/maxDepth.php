@@ -8,7 +8,6 @@
  *     function __construct($value) { $this->val = $value; }
  * }
  */
-use common\TreeNode;
 class Solution {
 
     /**
