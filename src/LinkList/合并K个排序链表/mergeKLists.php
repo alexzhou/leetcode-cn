@@ -31,7 +31,7 @@ class Solution
      */
     function mergeKLists($lists)
     {
-        if(count($lists)==0 || (count($lists)==1 && $lists[0]===null))return [];
+        if(count($lists)==0 || (count($lists)==1 && $lists[0]===null))return new ListNode();
         //TODO
     }
 }

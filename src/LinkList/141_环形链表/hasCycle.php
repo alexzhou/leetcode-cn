@@ -1,7 +1,4 @@
 <?php
-
-use common\ListNode;
-
 /**
  * Definition for a singly-linked list.
  * class ListNode {
