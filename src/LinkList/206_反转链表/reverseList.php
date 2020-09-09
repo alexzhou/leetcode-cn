@@ -31,6 +31,23 @@ class Solution {
         }
         return $newHead;
     }
+
+    /**
+     * 官方解法 优雅
+     * @param $head
+     * @return null
+     */
+    function reverseListV2($head){
+        $prev = null;
+        $curr = $head;
+        while ($curr !== null) {
+            $nextTemp = $curr->next;
+            $curr->next = $prev;
+            $prev = $curr;
+            $curr = $nextTemp;
+        }
+        return $prev;
+    }
 }
 
 function printLinkNode($head){
@@ -53,5 +70,5 @@ function createLinkNode($arr){
 $head = createLinkNode([1,2,3,4,5]);
 printLinkNode($head);
 $obj = new Solution();
-$node = $obj->reverseList($head);
+$node = $obj->reverseListV2($head);
 printLinkNode($node);
