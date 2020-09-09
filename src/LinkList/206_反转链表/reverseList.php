@@ -47,6 +47,17 @@ class Solution {
             $curr = $nextTemp;
         }
         return $prev;
+        /**
+         * pre:null
+         * curr:5->4->3->2->2
+         *
+         * pre:5->null
+         * curr:4->3->2->1
+         *
+         * pre:4->5->null
+         * curr:3->2->1
+         */
+
     }
 }
 
