@@ -7,9 +7,10 @@ class Solution {
      * @return Integer
      */
     function findKthLargest($nums, $k) {
-        $len = count($nums);
-        $this->quickSort($nums,0,$len-1);
-        return $nums[$len-1-$k+1];
+        $arr = SplFixedArray::fromArray($nums,false);
+        $len = $arr->count();
+        $this->quickSort($arr,0,$len-1);
+        return $arr[$len-1-$k+1];
     }
 
 
