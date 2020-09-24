@@ -23,10 +23,7 @@ class Solution {
     }
 
     function levelOrder2($root) {
-        if($root===null)return [];
-        $result = [];
-        $this->traverse2($root,$result);
-        return array_values($result);
+        return $this->traverse2($root);
     }
     /**
      * DFS
@@ -52,18 +49,21 @@ class Solution {
      * @param TreeNode $node
      * @param $result
      */
-    function traverse2($node,&$result){
+    function traverse2($node){
+        if($node==null)return [];
         $queue = [];
         array_push($queue,$node);
+        $result = [];
         while (!empty($queue)){
             $size = count($queue);
-            $result[] = [];
+            $row = [];
             for($i=1;$i<=$size;$i++){
                 $item = array_shift($queue);
-                $result[count($result)-1][] = $item->val;
+                $row[] = $item->val;
                 if($item->left)array_push($queue,$item->left);
                 if($item->right)array_push($queue,$item->right);
             }
+            $result[] = $row;
         }
     }
 }
