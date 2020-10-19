@@ -20,6 +20,7 @@ class Solution {
             if($heap->count() < $k){
                 $heap->insert($nums[$i]);
             }else{
+                //满k个之后，把最小的删除掉，插入新的，最后留到heap里面的是K个最大的值，第K个最大值位于top位置
                 if($heap->top() < $nums[$i]){
                     $heap->extract();
                     $heap->insert($nums[$i]);
