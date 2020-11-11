@@ -32,8 +32,4 @@ class Solution {
         }
         return $left->val == $right->val && $this->check($left->left, $right->right) && $this->check($left->right, $right->left);
     }
-
-    function check2($left,$right){
-       //TODO 迭代
-    }
 }
