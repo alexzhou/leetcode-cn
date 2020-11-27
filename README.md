@@ -1,3 +1,3 @@
-###leetcode.cn exercise
+### leetcode.cn Exercise  
 *Programming Language: java ,go ,php*
 
