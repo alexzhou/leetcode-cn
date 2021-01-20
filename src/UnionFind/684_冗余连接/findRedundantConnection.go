@@ -1,4 +1,4 @@
-package main
+package _84_冗余连接
 
 //官方答案
 //并查集
