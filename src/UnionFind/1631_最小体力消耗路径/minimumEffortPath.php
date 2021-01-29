@@ -47,6 +47,7 @@ class Solution {
         $rows = count($heights);
         $cols = count($heights[0]);
         $edgs = [];
+        //生成节点
         for($i=0;$i<$rows;$i++){
             for ($j=0;$j<$cols;$j++){
                 if($j==$cols-1 && $i<$rows-1){
@@ -63,6 +64,7 @@ class Solution {
                 }
             }
         }
+        //union
         usort($edgs,'static::compare');
         $end = $rows*$cols-1;
         $uf = new UnionFind($rows*$cols);
