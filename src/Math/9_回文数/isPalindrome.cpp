@@ -15,7 +15,6 @@ public:
         return x == revertedNumber || x == revertedNumber / 10;
     }
 };
-
 int main(){
     Solution obj;
     bool ans = obj.isPalindrome(-101);
