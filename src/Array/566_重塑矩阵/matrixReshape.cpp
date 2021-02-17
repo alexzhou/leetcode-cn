@@ -10,19 +10,16 @@ public:
             return nums;
         }
         vector<int> temp;
-        int r_count = 0;
-        int c_count = 0;
+        int count = 0;
         vector<vector<int>> ans;
         for(int i=0;i<x;i++){
             for(int j=0;j<y;j++){
-                c_count++;
+                count++;
                 temp.push_back(nums[i][j]);
-                if(c_count==c){
+                if(count%c==0){
                     ans.push_back(temp);
-                    r_count++;
-                    c_count = 0;
                     temp.clear();
-                    if(r_count==r){
+                    if(count==r*c){
                         return ans;
                     }
                 }
