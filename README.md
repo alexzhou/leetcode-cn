@@ -1,3 +1,3 @@
 ### leetcode.cn Exercise  
-*Programming Language: java ,go ,php*
+*Programming Language: java ,go ,php ,c++*
 
