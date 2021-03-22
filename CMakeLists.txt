@@ -1,3 +1,5 @@
 set (CMAKE_CXX_STANDARD 11)
 add_executable(20_有效的括号 leetcode/editor/cn/20_有效的括号.cpp)
 add_executable(682_棒球比赛 leetcode/editor/cn/682_棒球比赛.cpp)
+add_executable(1758_生成交替二进制字符串的最少操作数 leetcode/editor/cn/1758_生成交替二进制字符串的最少操作数.cpp)
+add_executable(874_模拟行走机器人 leetcode/editor/cn/874_模拟行走机器人.cpp)
