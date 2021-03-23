@@ -45,15 +45,14 @@ using namespace std;
  *     const vector<NestedInteger> &getList() const;
  * };
  */
-
 class NestedIterator {
 private:
-    stack<NestedInteger> ss;
-    stack<NestedInteger> newSS;
+    vector<int> ss;
+    vector<int>::iterator cur;
     void dfs(vector<NestedInteger> &nestedList){
         for(NestedInteger item : nestedList){
             if(item.isInteger()){
-                ss.pusu(item.getInteger());
+                ss.push_back(item.getInteger());
             }else{
                 dfs(item.getList());
             }
@@ -62,24 +61,19 @@ private:
 public:
 
     NestedIterator(vector<NestedInteger> &nestedList) {
-       dfs(nestedList);
-        for (int v : ss){
-            newSS.push(v);
-        }
+        dfs(nestedList);
+        cur = ss.begin();
     }
-    
+
     int next() {
-        int val =  newSS.top();
-        ss.pop();
-        return val;
+        return *cur++;
     }
-    
+
     bool hasNext() {
-        return !newSS.empty();
+        return cur != ss.end();
     }
 
 };
-
 /**
  * Your NestedIterator object will be instantiated and called as such:
  * NestedIterator i(nestedList);
