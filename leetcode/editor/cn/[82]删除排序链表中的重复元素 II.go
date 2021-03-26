@@ -58,7 +58,7 @@ func deleteDuplicates(head *ListNode) *ListNode {
 	fast :=head
 	slow := dump
 	for fast !=nil{
-		if (count[fast.Val] > 1){
+		if count[fast.Val] > 1 {
 			fast = fast.Next
 			if fast == nil {//最后几个是重复的
 				slow.Next = nil
