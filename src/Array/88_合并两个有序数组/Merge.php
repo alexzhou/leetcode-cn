@@ -25,5 +25,5 @@ class Solution {
 
 $nums1 = [0];$nums2=[1];
 $obj = new Solution();
-$obj->merge2($nums1,1,$nums2,1);
+$obj->merge($nums1,1,$nums2,1);
 var_dump($nums1);

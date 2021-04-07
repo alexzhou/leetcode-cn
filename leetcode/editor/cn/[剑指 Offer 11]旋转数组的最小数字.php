@@ -40,11 +40,13 @@ class Solution {
             }else{
                 $r--;
             }
+            echo 'l '.$l.' r '.$r.PHP_EOL;
         }
+        print_r($l);
         return $numbers[$l];
     }
 }
 $s = new Solution();
-$ans = $s->minArray([3,1]);
+$ans = $s->minArray([1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1]);
 var_dump($ans);
 //leetcode submit region end(Prohibit modification and deletion)
