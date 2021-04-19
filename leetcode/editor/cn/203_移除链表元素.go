@@ -44,6 +44,11 @@ package main
  *     Next *ListNode
  * }
  */
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
 func removeElements(head *ListNode, val int) *ListNode {
 	dump := &ListNode{0, head}
 	left := dump
