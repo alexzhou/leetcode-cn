@@ -4,3 +4,5 @@ add_executable(341_flatten-nested-list-iterator leetcode/editor/cn/341_flatten-n
 add_executable(6_zigzag-conversion leetcode/editor/cn/6_zigzag-conversion.cpp)
 add_executable(456_132-pattern leetcode/editor/cn/456_132-pattern.cpp)
 add_executable(190_reverse-bits leetcode/editor/cn/190_reverse-bits.cpp)
+add_executable(1787_make-the-xor-of-all-segments-equal-to-zero leetcode/editor/cn/1787_make-the-xor-of-all-segments-equal-to-zero.cpp)
+add_executable(421_maximum-xor-of-two-numbers-in-an-array leetcode/editor/cn/421_maximum-xor-of-two-numbers-in-an-array.cpp)
