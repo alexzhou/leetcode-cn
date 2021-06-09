@@ -8,7 +8,7 @@ public:
         int n = nums.size();
         for (int i = 0; i < n; i++) {
             int num = nums[i];
-            //counter Êµ¼ÊÉÏ¾ÍÊÇÇ°×ººÍ
+            //counter å®žé™…ä¸Šå°±æ˜¯å‰ç¼€å’Œ
             if (num == 1) {
                 counter++;
             } else {
