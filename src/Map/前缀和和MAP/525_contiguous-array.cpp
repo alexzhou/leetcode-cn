@@ -8,7 +8,7 @@ public:
         int n = nums.size();
         for (int i = 0; i < n; i++) {
             int num = nums[i];
-            //counter 实际上就是前缀和
+            //counter实际上就是前缀和
             if (num == 1) {
                 counter++;
             } else {
