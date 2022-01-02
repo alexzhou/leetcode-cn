@@ -1,2 +1,5 @@
 project(LeetCodeCN)
 set (CMAKE_CXX_STANDARD 11)
+add_executable(423_reconstruct-original-digits-from-english leetcode/editor/cn/423_reconstruct-original-digits-from-english.cpp)
+add_executable(1078_occurrences-after-bigram leetcode/editor/cn/1078_occurrences-after-bigram.cpp)
+add_executable(390_elimination-game leetcode/editor/cn/390_elimination-game.cpp)
