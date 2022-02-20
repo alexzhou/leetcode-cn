@@ -51,7 +51,23 @@ using namespace std;
 class Solution {
 public:
     int lastRemaining(int n) {
+        if(n==1){return 1;}
 
+        int len = n/2;
+
+        int first = 2;
+        int last = 2*len;
+
+        int count = 1;
+        while (first != last){
+            if(count%2==1){
+                last -=2*count;
+            }else{
+                first +=2&count;
+            }
+            count++;
+        }
+        return first;
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
