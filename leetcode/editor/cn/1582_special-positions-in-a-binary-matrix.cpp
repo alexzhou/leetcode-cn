@@ -39,13 +39,40 @@
 #include <vector>
 #include <algorithm>
 #include <iostream>
+#include <numeric>
 using namespace std;
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
 public:
     int numSpecial(vector<vector<int>>& mat) {
+        int rows = mat.size();
+        int columns = mat[0].size();
 
+        vector<int> row_0(rows);
+        vector<int> column_0(columns);
+
+        for (int i=0;i<columns;i++) {
+            for (int j = 0; j < rows; ++j) {
+                column_0[i]+=mat[j][i];
+                row_0[j]+=mat[j][i];
+            }
+        }
+
+        int res = 0;
+        for (int i=0;i<rows;i++) {
+            for (int j = 0; j < columns; ++j) {
+                if (mat[i][j]==1 && row_0[i]==1 && column_0[j]==1){
+                    res+=1;
+                }
+            }
+        }
+        return res;
+    }
+
+    void print(vector<int> v){
+        for (auto i: v)
+            std::cout << i << ' ';
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
