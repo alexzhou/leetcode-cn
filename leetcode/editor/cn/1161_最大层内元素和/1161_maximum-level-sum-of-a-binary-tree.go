@@ -50,6 +50,12 @@ import "math"
 * }
  */
 
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
+
 func maxLevelSum(root *TreeNode) int {
 	var mapLit map[int][]int
 	var level = 1
